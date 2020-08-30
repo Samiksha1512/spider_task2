@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Online Quiz-HackerMode</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+	<div class="container" id="container">
+		<div class="rightside">
+		  <h1>Welcome to Online Quiz</h1>
+		  <h2>Features :- <h2>
+		  <ul>
+		     <li>10 Questions</li>
+			 <li>200 seconds timer</li>
+			 <li>Random questions</li>
+			 <li>Get Result Anytime</li>
+		  </ul>
+		  <button onclick="goahead();">Let's Start</button>
+		</div>
+		
+		</div>
+	<div class="navbox" id="navbarscreen" style="display:none">
+	<!--<button id="btn1" value="1" onclick="printQuestions(this.value);">1</button>
+	<button id="btn1" value="2" onclick="printQuestions(this.value);">2</button>
+	<button id="btn1" value="3" onclick="printQuestions(this.value);">3</button>
+	<button id="btn1" value="4" onclick="printQuestions(this.value);">4</button>
+	<button id="btn1" value="5" onclick="printQuestions(this.value);">5</button>
+	<button id="btn1" value="6" onclick="printQuestions(this.value);">6</button>
+	<button id="btn1" value="7" onclick="printQuestions(this.value);">7</button>
+	<button id="btn1" value="8" onclick="printQuestions(this.value);">8</button>
+	<button id="btn1" value="9" onclick="printQuestions(this.value);">9</button>
+	<button id="btn1" value="10" onclick="printQuestions(this.value);">10</button>-->
+	</div>
+	<div class="box" id="writename"style="display:none">
+	<input type="text" id="nameinput" placeholder="Enter your name"required>
+		  <div class="buttonbox">
+		  <button onclick="start();">Submit</button>
+	</div>
+	</div>
+        <div class="box"id="questionScreen" style="display:none">
+		  <div class="title">
+		    Quiz on COVID-19 Important Facts
+		  </div>
+		  <div class="header">
+		  <div class="scorebox">Score : <span id="setscore"></span></div>
+		  
+		  <div class="timerbox"><span id="setime"></span></div>
+		  </div>
+		  <div class="questionbox">
+		  jgfgc
+		  </div>
+		  <div class="optionbox" id="optionsbox">
+		  <span onclick="checkAnswer(this)" id="opt1" data-opt="1">sdsf</span>
+		  <span onclick="checkAnswer(this)" id="opt2" data-opt="2">sdsf</span>
+		  <span onclick="checkAnswer(this)" id="opt3" data-opt="3">sdsf</span>
+		  <span onclick="checkAnswer(this)" id="opt4" data-opt="4">sdsf</span>
+		  </div>
+		  <div class="footer">
+		    <button onclick="shownext()">
+			Next
+			</button>
+			<button onclick="showResult(1)">
+			Show Result
+			</button>
+		  </div>
+		</div>
+		
+		<div class="box" id="resultScreen"  style="display:none">
+		<div class="title">
+		    Quiz Results
+		  </div>
+		<div class="resultbox">
+		<label>Name : </label>
+		   <span id="username">xyz</span>
+		   <label>Total Questions : </label>
+		   <span id="totalquestions">0</span>
+		   <label>Attempt : </label>
+		   <span id="attemptquestions">0</span>
+		   <label>Correct : </label>
+		   <span id="correctanswers">0</span>
+		   <label>Wrong : </label>
+		   <span id="wronganswers">0</span>
+		</div>
+		<div class="buttonbox">
+		<button onclick="viewhighscores();">Highscores</button><br />
+		<a href="questions.html">Start again</a>
+		
+		</div>
+		</div>
+		<div class="box" id="highScorescreen" style="display:none">
+		<div class="title">
+		    High Scores
+		  </div>
+		<ul id="highscorelist"></ul><br />
+		<div class="buttonbox">
+		<a href="questions.html">Start again</a>
+		</div>
+		</div>
+    </body>
+    <script src="js/quiz.js"></script>
+    <script src="js/script.js"></script>
+</html>
