@@ -1,6 +1,7 @@
 const quenmb = document.querySelector(".question-nmb");
 const queText = document.querySelector(".question-text");
 const optcont = document.querySelector(".opt-cont");
+let optcontainer = document.getElementById("allopts").querySelectorAll('div');
 const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
@@ -11,10 +12,13 @@ let availablequestions = myQuestions;
 let availableoptions = [];
 let correctans = 0;
 let attempt=0;
+let mark='mark';
 
 
 
 function getNewQues(n){
+	
+	
 	if(n==0 || n>myQuestions.length){
 	document.getElementById('prevbtn').style.display="none";
 }
@@ -41,10 +45,18 @@ console.log(n);
 		optcont.appendChild(option);
 		option.setAttribute("onclick", "getResults(this)");
 	}
-	
+	if(availablequestions[index].response=="marked"){
+		optlength = availablequestions[index].options.length;
+		for(let i=0; i<optlength; i++){
+			var opt = document.getElementById(i);
+			opt.setAttribute("onclick",' ');
+	}
+	}
 }
 
 function getResults(optionElem){
+	availablequestions[index].response="marked";
+	console.log(availablequestions[index]);
 	const optid = parseInt(optionElem.id);
 	//console.log(typeof optid);
 	if(optid===availablequestions[index].correctAnswer){
@@ -76,6 +88,7 @@ function unclickableopt(){
 }
 
 function next(){
+	
 	if(index==9){
 		quizOver();
 	}
@@ -91,8 +104,10 @@ function next(){
 	index++;
 	getNewQues(index);
 	}
+	
 }
 function prev(){
+	
 	optlength = availablequestions[index].options.length;
 	for(var k=0; k<optlength; k++){
 	var elem = document.getElementById(k);
