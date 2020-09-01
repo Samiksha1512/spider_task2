@@ -50,7 +50,13 @@ console.log(n);
 		for(let i=0; i<optlength; i++){
 			var opt = document.getElementById(i);
 			opt.setAttribute("onclick",' ');
+			
+			if(opt.id==availablequestions[index].correctAnswer){
+				opt.style.backgroundColor='green';
+				//console.log(opt.id);
+			}
 	}
+	
 	}
 }
 
