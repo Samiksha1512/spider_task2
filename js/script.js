@@ -116,7 +116,7 @@ function start(){
 	 
 	 if(counter==totaltime){
 		alert("Times's up.<br />Press Ok to see the results");
-		 //result();
+		 result();
 		 clearInterval(timer);
 	 }
 	 //console.log("min = " + min);
